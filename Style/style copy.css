@@ -1,0 +1,257 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack sections and footer vertically */
+    height: 100vh; /* Altura da págia = 1 tela */
+    width: 100%; /* largura da página = 100% da tela */
+    margin: 0;
+    background-color: white;
+    overflow: hidden;  /* Prevent content from overflowing outside of the body */
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* Toolbar - Navegação */
+.nav-section {
+    height: 10vh; 
+    width: 100%;  
+    display: flex;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.nav-return {
+    width: 5%;
+    border: black solid;
+}
+
+.nav-colorchange {
+    width: 5%;
+    margin-right: 0;
+    border: black solid;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
+.nav-logo {
+    width: 5%;
+    margin-right: 0;
+    border: black solid;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
+nav {
+    width: 85%;
+    border: black solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     /* Centers vertically */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+nav a:hover {
+    color: #ffffff; /* Cor ao passar o mouse (azul claro) */
+}
+
+
+/* Conteudo da Pagina */
+.main-content {
+    display: flex;
+    align-items: center;     /* Centers vertically */
+    height: 95vh;
+    width: 100%;
+    border: solid blueviolet 1px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     /* Centers vertically */
+    height: 100%;
+    width: 100%;
+}
+
+/* resto */
+.container {
+    display: flex;
+    flex-direction: row; /* alinhar horizontalmente */
+    align-items: center;     /* Centers vertically */
+    justify-content: space-evenly; /* or center, flex-start, etc. */
+    width: 100%;
+    border: solid yellow;
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container li {
+    width: 25%;
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+}
+.container li:hover {
+    transition: 300ms;
+    transform: scale(1.1); 
+}
+.container a{
+    text-decoration: none;
+}
+
+.container li img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container li p {
+    margin-top: 10px;
+    font-size: auto;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/*pagina de atividades */
+.container-activities {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    flex-flow: wrap;
+    border-radius: 40px;
+    overflow-x: auto; /* Add horizontal scroll if content overflows */
+}
+
+.container-activities li {
+    width: 20%;
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.container-activities li:hover {
+    transition: 300ms;
+    transform: scale(1.1); 
+}
+.container-activities a{
+    text-decoration: none;
+}
+
+.container-activities li img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container-activities li p {
+    margin-top: 0px;
+    font-size: auto;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/*LOGINS*/
+.logins{
+    display: flex;
+    flex-direction: column; /* alinhar horizontalmente */
+    align-items: center;     /* Centers vertically */
+    height: 100%;
+    width: 100%;
+    border: black solid 5px;
+    text-align: center;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.logins div {
+    padding-top: 1%;
+}
+
+.logins p {
+    font-size: 30px;
+}
+
+.logins img {
+    text-align: center;
+    height: 30%;
+    border: black solid 5px;
+    border-radius: 100%;
+
+    
+}
+
+.login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: black solid 5px;
+    align-items: center;
+}
+
+form input[type="text"], form input[type="password"] {
+    margin-bottom: 15px;
+    border: 1px solid #2d2c2e;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+}
+form input[type="submit"] {
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(41, 26, 123);
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+ 
+form input[type="submit"]:hover {
+    background-color: #000; 
+    color:white;
+}
+/*FIM DOS LOGINS*/
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    height: 5vh;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: solid white;
+    margin: 0;
+}
+
+.inicio {
+    font-size: 150px;
+}

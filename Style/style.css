@@ -1,0 +1,474 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack sections and footer vertically */
+    height: 100vh; /* Altura da págia = 1 tela */
+    max-height: 100vh; /* Altura da págia = 1 tela */
+    width: 100%; /* largura da página = 100% da tela */
+    margin: 0;
+    background-color: lightblue;
+    overflow: hidden;  /* Previne o conteudo de ultrapassar o corpo(body) */
+    font-family: "Montserrat", sans-serif;
+}
+
+div {
+    height: 100%; /* caso a div não tenha classe ela usara 100% da altura */
+}
+
+/* Conteudo da Pagina */
+.main-content {
+    display: flex;
+    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center; /* Centers horizontally */
+    height: 95vh;
+    width: 100%;
+    border: solid blueviolet 1px;
+}
+
+.content-section  {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center; /* Centers horizontally */
+    height: 100%;
+    width: 100%;
+    overflow: hidden /* cria uma barra de rolagem caso necessário*/
+}
+
+
+/* Toolbar - Navegação */
+.nav-section {
+    height: 10vh;
+    min-height: 10vh; 
+    width: 100%;  
+    display: flex;
+    overflow: hidden; /* Previne o conteudo de ultrapassar o corpo(body) */
+    box-sizing: border-box;
+}
+
+.nav-return {
+    width: 5%; 
+    border: rgb(218, 0, 0) solid;
+    display: flex;
+    justify-content: space-evenly; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    text-align: center;
+}
+
+.nav-return img{
+    width: 50%;
+    padding: 5%;
+    border-radius: 15%;
+    border: black solid;
+}
+.nav-return img:hover {
+    transition: 300ms;
+    transform: scale(1.1); 
+
+}
+
+.nav-colorchange {
+    width: 5%;
+    border: black solid;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
+.nav-logo {
+    width: 5%;
+    border: black solid;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
+nav {
+    width: 85%;
+    border: black solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     /* Centers vertically */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+nav a:hover {
+    color: #ffffff; /* Cor ao passar o mouse (azul claro) */
+}
+
+/* Footer styling */
+footer {
+    height: 5vh;
+    min-height: 5vh; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: solid white;
+    margin: 0;
+}
+
+
+/* Cards de Menus Principais */
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap; /* Alinha em multiplas linhas se necessário */
+    justify-content: space-evenly; /* or center, flex-start, etc. */
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    overflow: auto;
+    border: solid yellow;
+}   
+
+.menu-cards form {
+    flex: 0 0 calc(30% - 10px); /* Each form takes 22% width minus margin (4 forms per row) */
+    margin: 5px; /* Adds space between forms */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+    padding: 10px; /* Add padding for a better look */
+    transition: transform 300ms;/* Transition for hover effect */
+}
+.menu-cards form:hover {
+    transition: 300ms;
+    transform: scale(1.05); 
+}
+.menu-cards a{
+    text-decoration: none;
+}
+.menu-cards form img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.menu-cards form p {
+    margin-top: 10px;
+    font-size: 0.9em; /* Adjust font size for better scaling */
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Cards de Menus Secundários (jogos, atividade) */
+.secondary-menu-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+    justify-content: space-evenly; /* Distributes items evenly */
+    width: 100%;
+    height: auto;
+    border: solid yellow;
+    padding: 0;
+    margin: auto; /* Center the entire grid */
+    overflow: auto;
+}
+
+.secondary-menu-cards form {
+    flex: 0 0 calc(22% - 10px); /* Each form takes 22% width minus margin (4 forms per row) */
+    margin: 5px; /* Adds space between forms */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+    padding: 10px; /* Add padding for a better look */
+    transition: transform 300ms; /* Transition for hover effect */
+}
+
+.secondary-menu-cards form:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.secondary-menu-cards a {
+    text-decoration: none;
+}
+
+.secondary-menu-cards form img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.secondary-menu-cards form p {
+    margin-top: 10px;
+    font-size: 0.9em; /* Adjust font size for better scaling */
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Cards em formato de lista (alunos/salas/seleções... etç) */
+.list-menu-cards {
+    display: flex;
+    flex-direction: column; /* Aligns items in a vertical column */
+    align-items: center; /* Centers items horizontally */
+    width: 100%;
+    height: auto;
+    border: solid yellow;
+    padding: 0;
+    margin: auto;
+    overflow: auto;
+}
+
+.list-menu-cards form {
+    width: 80%; /* Makes each form take 80% of the parent container width */
+    margin: 10px 0; /* Adds vertical spacing between forms */
+    box-sizing: border-box;
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 300ms;
+}
+
+.list-menu-cards form:hover {
+    transform: scale(1.05); /* Slight hover scale effect */
+}
+
+.list-menu-cards button {
+    background-color: #f8f8f8; /* Neutral background */
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+
+.list-menu-cards button:hover {
+    background-color: #ddd; /* Hover effect for the button */
+}
+
+.list-menu-cards form p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* videos menu cards */
+.videos-menu-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+    justify-content: space-evenly; /* Distributes items evenly */
+    width: 100%;
+    height: auto;
+    border: solid yellow;
+    padding: 0;
+    margin: auto; /* Center the entire grid */
+    overflow: auto;
+}
+
+.videos-menu-cards form {
+    flex: 0 0 calc(50% - 50px); /* Each form takes 22% width minus margin (4 forms per row) */
+    margin: 5px; /* Adds space between forms */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 20px;
+    padding: 10px; /* Add padding for a better look */
+    transition: transform 300ms; /* Transition for hover effect */
+}
+
+.videos-menu-cards form:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.videos-menu-cards a {
+    text-decoration: none;
+}
+
+.videos-menu-cards form img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.videos-menu-cards form p {
+    margin-top: 10px;
+    font-size: 0.9em; /* Adjust font size for better scaling */
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+/* filtros de pesquisa */
+.filters {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    height: 10%; /* Adjust as needed */
+    width: 100%;
+    border: black solid 5px;
+    text-align: center;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.filters form {
+    display: flex; /* Flexbox for the form elements */
+    width: 80%; /* Use full width */
+    border: solid yellow; /* Optional: remove if not needed */
+    justify-content: space-between; /* Space out the inputs evenly */
+}
+
+.filters form input[type="text"], 
+.filters form select {
+    margin-right: 10px; /* Space between inputs */
+    border: 1px solid #2d2c2e;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 35px; /* Height of inputs */
+    min-width: 200px; /* Set a specific width for text inputs */
+    flex-grow: 1; /* Allow select to grow to take available space */
+}
+
+
+
+.filters form input[type="submit"] {
+    color: rgb(255, 255, 255); /* Text color */
+    border: none; /* No border */
+    height: 40px; /* Increase height for a larger button */
+    padding: 0 70px; /* Add horizontal padding for more width */
+    background-color: rgb(41, 26, 123); /* Background color */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 20px; /* Font size */
+    font-family: "Montserrat", sans-serif; /* Font family */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.filters form input[type="submit"]:hover {
+    background-color: #000; /* Darker background on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* formularios de login */
+
+/* LOGINS */
+.logins {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;     /* Center items horizontally */
+    height: 100%;            /* Full height of the container */
+    width: 100%;             /* Full width of the container */
+    border: black solid 5px; /* Border around the entire container */
+    text-align: center;      /* Center text alignment */
+    overflow: hidden; 
+    box-sizing: border-box;  /* Include padding and border in width and height */
+}
+
+.logins div {
+    padding-top: 1%; /* Padding for the divs */
+}
+
+.logins p {
+    font-size: 30px; /* Font size for paragraph text */
+}
+
+.logins img {
+    height: 40%; /* Set a specific height for images */
+    border: black solid 5px; /* Border around images */
+    border-radius: 100%; /* Circular images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.logins form {
+    width: 100%; /* Full width for the form */
+}
+
+.logins form input[type="text"], 
+.logins form input[type="password"] {
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #2d2c2e; /* Border style */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in width */
+    height: 35px; /* Height of the inputs */
+    width: 100%; /* Full width for inputs */
+}
+
+.logins form input[type="submit"] {
+    color: rgb(255, 255, 255); /* Text color */
+    border: none; /* No border */
+    height: 40px; /* Increase height for a larger button */
+    padding: 0 70px; /* Add horizontal padding for more width */
+    background-color:  rgb(41, 26, 123); /* Background color */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 20px; /* Font size */
+    font-family: "Montserrat", sans-serif; /* Font family */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.logins form input[type="submit"]:hover {
+    background-color: blue; /* Darker background on hover */
+    color: white; /* Change text color on hover */
+}
+/*FIM DOS LOGINS*/
+
+
+/* Botão dos cadastros */
+
+.custom-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-button .info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.custom-button .info,
+.custom-button .extra-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-button p {
+    margin: 0;
+}
+
+
+
+.Registries {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;     /* Center items horizontally */
+    height: 100%;            /* Full height of the container */
+    width: 100%;             /* Full width of the container */
+    border: black solid 5px; /* Border around the entire container */
+    text-align: center;      /* Center text alignment */
+    overflow: auto; 
+    box-sizing: border-box;  /* Include padding and border in width and height */
+}

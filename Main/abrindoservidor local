@@ -1,0 +1,25 @@
+npm install -g localtunnel
+
+lt --port 80
+
+whatismyip.com
+
+
+
+<?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+    <li><a href="?page=Modules/Login/tutorlogin.php">Tutor Login</a></li>
+<?php endif; ?>
+
+
+criando conexão local com o MySQL workbench
+
+To manage the MySQL database via MySQL Workbench:
+Open MySQL Workbench.
+In the MySQL Workbench dashboard, click on "+ Add new connection".
+In the "Connection Name" field, give your connection a name (e.g., XAMPP MySQL).
+Hostname: Enter localhost (since MySQL is running locally).
+Port: Leave it as 3306 (default MySQL port).
+Username: Use root (default XAMPP MySQL user).
+Password: Leave it blank if no password is set (by default XAMPP's MySQL user root does not have a password). Otherwise, enter the password you've set.
+Test Connection: Click the "Test Connection" button to check if the connection works.
+If successful, click "OK" to save the connection.
