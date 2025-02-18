@@ -1,5 +1,5 @@
 # JuquinhaEnsina🎓📚
-https://www.youtube.com/watch?v=1BWmR0hdbDo
+https://www.youtube.com/watch?v=1BWmR0hdbDo<br>
 Um sistema inovador de gestão escolar desenvolvido com PHP Laravel, Tailwind CSS e JavaScript, integrando MySQL para armazenamento eficiente de dados.
 
 Este projeto foi desenvolvido em equipe durante minhas aulas de Programação Web, com o objetivo de tornar o processo de ensino mais dinâmico e interativo por meio de jogos educativos e avaliações online.
